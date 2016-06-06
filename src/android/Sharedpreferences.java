@@ -48,7 +48,7 @@ public class Sharedpreferences extends CordovaPlugin {
 					}
 				}else if(modeType.equals("MODE_PRIVATE")){
 					try{
-						SharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_APPEND);
+						SharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE);
 					}catch(Exception e){
 						callbackContext.error("Error creating Shared Preferences" + e.getMessage());
 						return false;
